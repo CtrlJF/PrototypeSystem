@@ -1,0 +1,473 @@
+<!doctype html>
+<html lang="en">
+ 
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.min.css">
+    <link href="assets/vendor/fonts/circular-std/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/libs/css/style.css">
+    <link rel="stylesheet" href="assets/vendor/fonts/fontawesome/css/fontawesome-all.css">
+    <!-- <link rel="stylesheet" href="assets/vendor/fonts/material-design-iconic-font/css/materialdesignicons.min.css"> -->
+    <link rel="stylesheet" href="assets/vendor/charts/c3charts/c3.css">
+    <title> Family Picture </title>
+
+    <style>
+        .product-img-head {
+            overflow: hidden;
+            height: 100%; /* Adjust as needed */
+        }
+        .cover-image {
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- ============================================================== -->
+    <!-- main wrapper -->
+    <!-- ============================================================== -->
+    <div class="dashboard-main-wrapper">
+        <!-- ============================================================== -->
+        <!-- navbar -->
+        <!-- ============================================================== -->
+        <div class="dashboard-header">
+            <nav class="navbar navbar-expand-lg bg-white fixed-top">
+                <a class="navbar-brand" href="index.html">DSWD 4p's CFMS</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse " id="navbarSupportedContent">
+                    <ul class="navbar-nav ml-auto navbar-right-top">
+                        <li class="nav-item dropdown connection"></li>
+                        <li class="nav-item dropdown nav-user">
+                            <a class="nav-link nav-user-img" href="#" id="navbarDropdownMenuLink2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="assets/images/avatar-1.jpg" alt="" class="user-avatar-md rounded-circle"></a>
+                            <div class="dropdown-menu dropdown-menu-right nav-user-dropdown" aria-labelledby="navbarDropdownMenuLink2">
+                                <div class="nav-user-info">
+                                    <h5 class="mb-0 text-white nav-user-name">John Abraham </h5>
+                                    <span class="status"></span><span class="ml-2">admin</span>
+                                </div>
+                                <a class="dropdown-item" href="#"><i class="fas fa-user mr-2"></i>Account</a>
+                                <a class="dropdown-item" href="#"><i class="fas fa-cog mr-2"></i>Setting</a>
+                                <a class="dropdown-item" href="/User/pages/login.html"><i class="fas fa-power-off mr-2"></i>Logout</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        <!-- ============================================================== -->
+        <!-- end navbar -->
+        <!-- ============================================================== -->
+        <!-- ============================================================== -->
+        <!-- left sidebar -->
+        <!-- ============================================================== -->
+        <div class="nav-left-sidebar sidebar-dark">
+            <div class="menu-list">
+                <nav class="navbar navbar-expand-lg navbar-light">
+                    <a class="d-xl-none d-lg-none" href="#">Dashboard</a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav flex-column">
+                            <li class="nav-divider">
+                                USER
+                            </li>
+                            <li class="nav-item ">
+                                <a class="nav-link " href="index.html" ><i class="fa fa-fw fa-user-circle"></i>Profile<span class="badge badge-success"></span></a>
+                            </li> 
+                            <li class="nav-item ">
+                                <a class="nav-link active" href="#" onclick="toggleFolderIconUser()" data-toggle="collapse" aria-expanded="false" data-target="#submenu-1" aria-controls="submenu-1"><i class="fas fa-folder" id="folderIconUser"></i>Case Folder <span class="badge badge-success">6</span></a>
+                                <div id="submenu-1" class="collapse submenu" >
+                                    <ul class="nav flex-column">
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-1-2" aria-controls="submenu-1-2">ID's</a>
+                                            <div id="submenu-1-2" class="collapse submenu" >
+                                                <ul class="nav flex-column">
+                                                    <li class="nav-item">
+                                                        <a class="nav-link" href="/User/nationalID.html">National ID</a>
+                                                    </li>
+                                                    <li class="nav-item">
+                                                        <a class="nav-link" href="/User/pantawidID.html">Pantawid ID</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="/User/cashCard.html">Cash Card</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="/User/familyPicture.html">Family Picture</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="/User/kasabutan.html">Kasabutan</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="/User/birthCert.html">Birth Certificate</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="/User/marriageCont.html">Marriage Contract</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="/User/immuRec.html">Immunization Record</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="/User/gradeCards.html">Grade Cards</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="/User/mdr.html">MDR</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="/User/CertAttendance.html">Certificate of Attendance on Trainings Attended</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="/User/beneProfile.html">Beneficiary Profile</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li> 
+                            <li class="nav-divider">
+                                ADMIN
+                            </li>
+                            <li class="nav-item ">
+                                <a class="nav-link" href="#" onclick="toggleFolderIcon()" data-toggle="collapse" aria-expanded="false" data-target="#submenu-6" aria-controls="submenu-6"><i class="fas fa-folder" id="folderIcon"></i> Pages </a>
+                                <div id="submenu-6" class="collapse submenu" >
+                                    <ul class="nav flex-column">
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#">GIS</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#">SWDI Result</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#">HAF</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#">Social Case Study Report</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#">Case Assessment Report</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#">Annual Evaluation Report</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#">Progress Notes</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#">PSMS</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#">Referral Letters</a>
+                                        </li>
+                                        
+                                    </ul>
+                                </div>
+                            </li> 
+                        </ul>
+                    </div>
+
+                </nav>
+
+            </div>
+        </div>
+        <!-- ============================================================== -->
+        <!-- end left sidebar -->
+        <!-- ============================================================== -->
+        <!-- ============================================================== -->
+        <!-- wrapper  -->
+        <!-- ============================================================== -->
+        <div class="dashboard-wrapper">
+            <div class="dashboard-ecommerce">
+                <div class="container-fluid dashboard-content ">
+                    <!-- ============================================================== -->
+                    <!-- pageheader  -->
+                    <!-- ============================================================== -->
+                    <div class="row">
+                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                            <div class="page-header">
+                                <h2 class="pageheader-title">Family Picture</h2>
+                                <div class="page-breadcrumb">
+                                    <nav aria-label="breadcrumb">
+                                        <ol class="breadcrumb">
+                                            <li class="breadcrumb-item"><a href="#" class="btn btn-success"><i class="fas fa-plus"></i> New</a></li>
+                                            <!-- <li class="breadcrumb-item"><a href="#" class="btn btn-danger">Delete</a></li> -->
+                                            <!-- <li class="breadcrumb-item"><a href="#" class="breadcrumb-link">Dashboard</a></li>
+                                            <li class="breadcrumb-item active" aria-current="page">E-Commerce Dashboard Template</li> -->
+                                        </ol>
+                                    </nav>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- ============================================================== -->
+                    <!-- end pageheader  -->
+                    <!-- ============================================================== -->
+                    <div class="ecommerce-widget">
+                        <div class="row">
+                                          <!-- recent orders  -->
+                            <!-- ============================================================== -->
+                            <div class="col-xl-9 col-lg-8 col-md-8 col-sm-12 col-12">
+                                <div class="row">
+                                    <div class="col-xl-4 col-lg-6 col-md-12 col-sm-12 col-12">
+                                        <div class="product-thumbnail">
+                                            <div class="product-img-head">
+                                                <img src="assets/images/avatar-2.jpg" alt="" class="cover-image">  
+                                            </div>
+                                            <div class="product-content">
+                                                <div class="product-content-head">
+                                                    <h3 class="product-title">Henry Butter</h3>
+                                                    <div class="product-price text-warning" >Father</div>
+                                                </div>
+                                                <div class=" product-content-head ">
+                                                    <a href="#" class="btn btn-primary mr-2" onclick="document.getElementById('file-input').click(); return false;">Upload</a>
+                                                    <input id="file-input" type="file" style="display: none;" onchange="handleFileSelect(event)">    
+                                                    <a href="#" class="btn btn-info mr-2"> Print </a>
+                                                    <button class="btn btn-danger">Delete</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-4 col-lg-6 col-md-12 col-sm-12 col-12">
+                                        <div class="product-thumbnail">
+                                            <div class="product-img-head">
+                                                <img src="assets/images/avatar-2.jpg" alt="" class="cover-image">  
+                                            </div>
+                                            <div class="product-content">
+                                                <div class="product-content-head">
+                                                    <h3 class="product-title">Henry Butter</h3>
+                                                    <div class="product-price text-warning" >Father</div>
+                                                </div>
+                                                <div class=" product-content-head ">
+                                                    <a href="#" class="btn btn-primary mr-2" onclick="document.getElementById('file-input').click(); return false;">Upload</a>
+                                                    <input id="file-input" type="file" style="display: none;" onchange="handleFileSelect(event)">    
+                                                    <a href="#" class="btn btn-info mr-2"> Print </a>
+                                                    <button class="btn btn-danger">Delete</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-4 col-lg-6 col-md-12 col-sm-12 col-12">
+                                        <div class="product-thumbnail">
+                                            <div class="product-img-head">
+                                                <img src="assets/images/avatar-2.jpg" alt="" class="cover-image">  
+                                            </div>
+                                            <div class="product-content">
+                                                <div class="product-content-head">
+                                                    <h3 class="product-title">Henry Butter</h3>
+                                                    <div class="product-price text-warning" >Father</div>
+                                                </div>
+                                                <div class=" product-content-head ">
+                                                    <a href="#" class="btn btn-primary mr-2" onclick="document.getElementById('file-input').click(); return false;">Upload</a>
+                                                    <input id="file-input" type="file" style="display: none;" onchange="handleFileSelect(event)">    
+                                                    <a href="#" class="btn btn-info mr-2"> Print </a>
+                                                    <button class="btn btn-danger">Delete</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div> 
+                            </div>
+
+                            <!-- <div class="col-xl-3 col-lg-4 col-md-4 col-sm-12 col-1">
+                                <div class="product-sidebar">
+                                    <div class="product-sidebar-widget">
+                                        <h4 class="mb-0">E-Commerce Filter</h4>
+                                    </div>
+                                    <div class="product-sidebar-widget">
+                                        <h4 class="product-sidebar-widget-title">Category</h4>
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="cat-1">
+                                            <label class="custom-control-label" for="cat-1">Categories #1</label>
+                                        </div>
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="cat-2">
+                                            <label class="custom-control-label" for="cat-2">Categories #2</label>
+                                        </div>
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="cat-3">
+                                            <label class="custom-control-label" for="cat-3">Categories #3</label>
+                                        </div>
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="cat-4">
+                                            <label class="custom-control-label" for="cat-4">Categories #4</label>
+                                        </div>
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="cat-5">
+                                            <label class="custom-control-label" for="cat-5">Categories #5</label>
+                                        </div>
+                                    </div>
+                                    <div class="product-sidebar-widget">
+                                        <h4 class="product-sidebar-widget-title">Size</h4>
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="size-1">
+                                            <label class="custom-control-label" for="size-1">Small</label>
+                                        </div>
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="size-2">
+                                            <label class="custom-control-label" for="size-2">Medium</label>
+                                        </div>
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="size-3">
+                                            <label class="custom-control-label" for="size-3">Large</label>
+                                        </div>
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="size-4">
+                                            <label class="custom-control-label" for="size-4">Extra Large</label>
+                                        </div>
+                                    </div>
+                                    <div class="product-sidebar-widget">
+                                        <h4 class="product-sidebar-widget-title">Brand</h4>
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="brand-1">
+                                            <label class="custom-control-label" for="brand-1">Brand Name #1</label>
+                                        </div>
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="brand-2">
+                                            <label class="custom-control-label" for="brand-2">Brand Name #2</label>
+                                        </div>
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="brand-3">
+                                            <label class="custom-control-label" for="brand-3">Brand Name #3</label>
+                                        </div>
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="brand-4">
+                                            <label class="custom-control-label" for="brand-4">Brand Name #4</label>
+                                        </div>
+                                    </div>
+                                    <div class="product-sidebar-widget">
+                                        <h4 class="product-sidebar-widget-title">Color</h4>
+                                        <div class="custom-control custom-radio custom-color-blue ">
+                                            <input type="radio" id="color-1" name="customRadio" class="custom-control-input">
+                                            <label class="custom-control-label" for="color-1">Blue</label>
+                                        </div>
+                                        <div class="custom-control custom-radio custom-color-red ">
+                                            <input type="radio" id="color-2" name="customRadio" class="custom-control-input">
+                                            <label class="custom-control-label" for="color-2">Red</label>
+                                        </div>
+                                        <div class="custom-control custom-radio custom-color-yellow ">
+                                            <input type="radio" id="color-3" name="customRadio" class="custom-control-input">
+                                            <label class="custom-control-label" for="color-3">Yellow</label>
+                                        </div>
+                                        <div class="custom-control custom-radio custom-color-black ">
+                                            <input type="radio" id="color-4" name="customRadio" class="custom-control-input">
+                                            <label class="custom-control-label" for="color-4">Black</label>
+                                        </div>
+                                    </div>
+                                    <div class="product-sidebar-widget">
+                                        <h4 class="product-sidebar-widget-title">Price</h4>
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="price-1">
+                                            <label class="custom-control-label" for="price-1">$$</label>
+                                        </div>
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="price-2">
+                                            <label class="custom-control-label" for="price-2">$$$</label>
+                                        </div>
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="price-3">
+                                            <label class="custom-control-label" for="price-3">$$$$</label>
+                                        </div>
+                                    </div>
+                                    <div class="product-sidebar-widget">
+                                        <a href="#" class="btn btn-outline-light">Reset Filter</a>
+                                    </div>
+                                </div>
+                            </div> -->
+
+
+                        </div>
+                    </div>
+                </div>
+
+            <!-- ============================================================== -->
+            <!-- footer -->
+            <!-- ============================================================== -->
+            <div class="footer">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+                             Copyright © 2024 Concept. All rights reserved. Dashboard by <a href="https://colorlib.com/wp/">Colorlib</a>.
+                        </div>
+                        <!-- <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+                            <div class="text-md-right footer-links d-none d-sm-block">
+                                <a href="javascript: void(0);">About</a>
+                                <a href="javascript: void(0);">Support</a>
+                                <a href="javascript: void(0);">Contact Us</a>
+                            </div>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+            <!-- ============================================================== -->
+            <!-- end footer -->
+            <!-- ============================================================== -->
+        </div>
+        <!-- ============================================================== -->
+        <!-- end wrapper  -->
+        <!-- ============================================================== -->
+    </div>
+    <!-- ============================================================== -->
+    <!-- end main wrapper  -->
+    <!-- ============================================================== -->
+    <!-- Optional JavaScript -->
+    <!-- jquery 3.3.1 -->
+    <script src="assets/vendor/jquery/jquery-3.3.1.min.js"></script>
+    <!-- bootstap bundle js -->
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.js"></script>
+    <!-- slimscroll js -->
+    <!-- <script src="assets/vendor/slimscroll/jquery.slimscroll.js"></script> -->
+    <!-- main js -->
+    <!-- <script src="assets/libs/js/main-js.js"></script> -->
+    <!-- chart c3 js -->
+    <script src="assets/vendor/charts/c3charts/c3.min.js"></script>
+    <script src="assets/vendor/charts/c3charts/d3-5.4.0.min.js"></script>
+    <script src="assets/vendor/charts/c3charts/C3chartjs.js"></script>
+
+    <script>
+    function handleFileSelect(event) {
+        const selectedFile = event.target.files[0];
+        if (selectedFile) {
+            // Process the selected file here
+            console.log("Selected file:", selectedFile);
+        }
+    }
+
+    // Function to toggle the folder icon
+    function toggleFolderIcon() {
+        var folderIcon = document.getElementById("folderIcon");
+        if (folderIcon.classList.contains("fa-folder")) {
+            folderIcon.classList.remove("fa-folder");
+            folderIcon.classList.add("fa-folder-open");
+        } else {
+            folderIcon.classList.remove("fa-folder-open");
+            folderIcon.classList.add("fa-folder");
+        }
+    }
+    function toggleFolderIconUser() {
+        var folderIcon = document.getElementById("folderIconUser");
+        if (folderIcon.classList.contains("fa-folder")) {
+            folderIcon.classList.remove("fa-folder");
+            folderIcon.classList.add("fa-folder-open");
+        } else {
+            folderIcon.classList.remove("fa-folder-open");
+            folderIcon.classList.add("fa-folder");
+        }
+    }
+
+    // Add an event listener to toggle the icon when clicked
+    document.getElementById("submenu-6").addEventListener("show.bs.collapse", toggleFolderIcon);
+    document.getElementById("submenu-6").addEventListener("hide.bs.collapse", toggleFolderIcon);
+    document.getElementById("submenu-1").addEventListener("show.bs.collapse", toggleFolderIcon);
+    document.getElementById("submenu-1").addEventListener("hide.bs.collapse", toggleFolderIcon);
+
+    </script>
+</body>
+ 
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DSWD 4P's Case Folder Management System</title>
+    <meta name="author" content="Julios Felisilda">
+
+     <!-- Bootstrap CSS -->
+     <link rel="stylesheet" href="Admin/assets/vendor/bootstrap/css/bootstrap.min.css">
+     <link href="Admin/assets/vendor/fonts/circular-std/style.css" rel="stylesheet">
+     <link rel="stylesheet" href="Admin/assets/libs/css/style.css">
+     <link rel="stylesheet" href="Admin/assets/vendor/fonts/fontawesome/css/fontawesome-all.css">
+
+     <style>
+        main {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 70vh;
+    }
+    .container {
+        /* border: 2px solid #333; */
+        padding: 20px;
+        text-align: center;
+    }
+    .title {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+
+    .button {
+        display: inline-block;
+        padding: 10px 20px;
+        margin: 0 10px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+        text-decoration: none;
+        font-size: 16px;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+    }
+
+    .button:hover {
+        background-color: #0056b3;
+    }
+    footer {
+        display: flex;
+        justify-content: center;
+    }  
+     </style>
+
+</head>
+<body>
+    <header>
+        <div>
+            <img src="dswdLogo.jpg" alt="Dswd Logo" style="width: 100%; height:200px;">
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <span class="title">Case Folder :</span>
+            <button class="button" onclick="window.location.href='User/pages/login.html'" >User</button>
+            <button class="button" onclick="window.location.href='Admin/pages/login.html'" >Admin</button> 
+        </div>
+    </main>
+    <footer>
+        <div >
+            <div >
+                <div >
+                     Copyright © 2024 Department of Social Welfare Development 4P's Case Folder Management System. All rights reserved.
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

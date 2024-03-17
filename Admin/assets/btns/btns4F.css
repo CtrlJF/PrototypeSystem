@@ -1,0 +1,6 @@
+.ecommerce-widget .content {
+    display: none;
+  }
+.ecommerce-widget .active {
+    display: block;
+}
